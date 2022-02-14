@@ -9,7 +9,7 @@
 const komp = ["rock", "paper", "scissors"];
 document.querySelector(".bu").addEventListener ("click",choise)
 function choise () {
-    let userChoise = document.querySelector(".gameField").value
+    let userChoise=document.querySelector(".gameField").value.toLowerCase() //  this will remove the letter case problem
 let pcChoise = komp[desicion()]
 
 console.log (userChoise)
