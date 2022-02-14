@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <body>
+        
+           
+            <label for="gameField">rock,paper or scissors?</label>
+            <input type = "text" id = "gameField" class = "gameField" >
+            <input class = "bu" type="submit" value="Submit">
+<script>
+const komp = ["rock", "paper", "scissors"];
+document.querySelector(".bu").addEventListener ("click",choise)
+function choise () {
+    let userChoise = document.querySelector(".gameField").value
+let pcChoise = komp[desicion()]
+
+console.log (userChoise)
+console.log (pcChoise)
+userWining ()
+pcWining ()
+tie ()
+
+function userWining (){
+if ((userChoise == "rock" && pcChoise=="scissors" )|| (userChoise == "paper" && pcChoise==="rock" )|| ( userChoise == "scissors" && pcChoise==="paper") ){
+            console.log ("User has won!")
+} 
+}
+function pcWining (){
+    if ((pcChoise == "rock" && userChoise=="scissors" )|| (pcChoise == "paper" && userChoise==="rock" )|| ( pcChoise == "scissors" && userChoise==="paper") ){
+        console.log ("Computer has won!")
+}
+}
+function tie (){
+    if ((userChoise == "rock" && pcChoise=="rock" )|| (userChoise == "paper" && pcChoise==="paper" )|| ( userChoise == "scissors" && pcChoise==="scissors")){
+console.log ("Tie")
+}
+}
+
+function desicion (){
+    return Math.floor (Math.random() * 3 )
+
+
+
+}
+}
+
+
+</script>
+    </body>
+</html>
